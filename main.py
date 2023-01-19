@@ -127,14 +127,43 @@ def piektaisuzd():
   poga5=Button(logs, text='Nākamais Jautājums', command=izdzestpiekto)
   poga5.place(x=250, y=300)
 
-
+def sestaisuzd():
+  J6=Label(logs, text='Cik iztērē vidēji Latvijā priekš alkohola gada laikā?', font=15)
+  R16=Checkbutton(logs, text='80 eiro', variable = a6, onvalue=1, offvalue=0)
+  R17=Checkbutton(logs, text='100 eiro', variable = a6, onvalue=2, offvalue=0)
+  R18=Checkbutton(logs, text='120 eiro', variable = a6, onvalue=3, offvalue=0)
+  J6.place(x=110, y=100)
+  R16.place(x=270, y=150)
+  R17.place(x=270, y=200)
+  R18.place(x=270, y=250)
+  def izdzestsesto():
+    J6.place_forget()
+    R16.place_forget()
+    R17.place_forget()
+    R18.place_forget()
+    poga6.place_forget()
+    septitaisuzd()
+  poga6=Button(logs, text='Nākamais Jautājums', command=izdzestsesto)
+  poga6.place(x=250, y=300)
   
-
+def septitaisuzd():
+  J7=Label(logs, text='Cik procenti vīriešu paliek vairāk agresīvi alkohola reibumā?', font=15)
+  R19=Checkbutton(logs, text='20%', variable = a7, onvalue=3, offvalue=0)
+  R20=Checkbutton(logs, text='35%', variable = a7, onvalue=2, offvalue=0)
+  R21=Checkbutton(logs, text='50%', variable = a7, onvalue=1, offvalue=0)
+  J7.place(x=110, y=100)
+  R19.place(x=270, y=150)
+  R20.place(x=270, y=200)
+  R21.place(x=270, y=250)
+  def izdzestseptito():
+    J7.place_forget()
+    R19.place_forget()
+    R20.place_forget()
+    R21.place_forget()
+    poga7.place_forget()
+    astotaisuzd()
+  poga7=Button(logs, text='Nākamais Jautājums', command=izdzestseptito)
+  poga7.place(x=250, y=300)
 
 
 logs.mainloop()
-
-
-
-
-
