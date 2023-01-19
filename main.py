@@ -8,16 +8,22 @@ logs.geometry('640x480')
 a=Canvas(logs, width=640, height=480)
 a.place(x=0, y=0)
 #Sākuma ekrāns
-label = Label(logs, text="Tests par alkoholu",font=25)
-label.place(x=250, y=100, height=20, width=150)
+  
 def navsākumaekrāns():
   label.place_forget()
   Sākt.place_forget()
   pirmaisuzd()
   
+def sākumaekrānsplace():
+  label.place(x=250, y=100, height=20, width=150)
+  Sākt.place(x=300, y=300)
+
+label = Label(logs, text="Tests par alkoholu",font=25)
+label.place(x=250, y=100, height=20, width=150)
 Sākt = Button(logs, text='Sākt testu', command=navsākumaekrāns)
 Sākt.place(x=300, y=300)
 
+  
 #Jautājumu cipari (neaiztikt)
 a1=IntVar()
 a2=IntVar()
@@ -28,6 +34,7 @@ a6=IntVar()
 a7=IntVar()
 a8=IntVar()
 a9=IntVar()
+a10=IntVar()
 
 
 #Jautājumi un atbildes
@@ -165,5 +172,92 @@ def septitaisuzd():
   poga7=Button(logs, text='Nākamais Jautājums', command=izdzestseptito)
   poga7.place(x=250, y=300)
 
+def astotaisuzd():
+  J8=Label(logs, text='Vai alkohols skaitās kā narkotikas?', font=15)
+  R22=Checkbutton(logs, text='Jā', variable = a8, onvalue=1, offvalue=0)
+  R23=Checkbutton(logs, text='Nē', variable = a8, onvalue=2, offvalue=0)
+  R24=Checkbutton(logs, text='Atšķirībā kāds veids', variable = a8, onvalue=3, offvalue=0)
+  J8.place(x=110, y=100)
+  R22.place(x=270, y=150)
+  R23.place(x=270, y=200)
+  R24.place(x=270, y=250)
+  def izdzestastoto():
+    J8.place_forget()
+    R22.place_forget()
+    R23.place_forget()
+    R24.place_forget()
+    poga8.place_forget()
+    devitaisuzd()
+  poga8=Button(logs, text='Nākamais Jautājums', command=izdzestastoto)
+  poga8.place(x=250, y=300)
+
+def devitaisuzd():
+  J9=Label(logs, text='Vai alkohols skaitās kā narkotikas?', font=15)
+  R25=Checkbutton(logs, text='Jā', variable = a9, onvalue=1, offvalue=0)
+  R26=Checkbutton(logs, text='Nē', variable = a9, onvalue=2, offvalue=0)
+  R27=Checkbutton(logs, text='Atšķirībā kāds veids', variable = a9, onvalue=3, offvalue=0)
+  J9.place(x=110, y=100)
+  R25.place(x=270, y=150)
+  R26.place(x=270, y=200)
+  R27.place(x=270, y=250)
+  def izdzestdevito():
+    J9.place_forget()
+    R25.place_forget()
+    R26.place_forget()
+    R27.place_forget()
+    poga9.place_forget()
+    desmitaisuzd()
+  poga9=Button(logs, text='Nākamais Jautājums', command=izdzestdevito)
+  poga9.place(x=250, y=300)
+
+def desmitaisuzd():
+  J10=Label(logs, text='Vai alkohols skaitās kā narkotikas?', font=15)
+  R28=Checkbutton(logs, text='Jā', variable = a10, onvalue=1, offvalue=0)
+  R29=Checkbutton(logs, text='Nē', variable = a10, onvalue=2, offvalue=0)
+  R30=Checkbutton(logs, text='Atšķirībā kāds veids', variable = a10, onvalue=3, offvalue=0)
+  J10.place(x=110, y=100)
+  R28.place(x=270, y=150)
+  R29.place(x=270, y=200)
+  R30.place(x=270, y=250)
+  def izdzestdesmito():
+    J10.place_forget()
+    R28.place_forget()
+    R29.place_forget()
+    R30.place_forget()
+    poga10.place_forget()
+    rezultats1()
+  poga10=Button(logs, text='Pabeigt', command=izdzestdesmito)
+  poga10.place(x=250, y=300)
+
+def rezultats1():
+    sum=0
+    if a1.get()==1:
+      sum=sum+1
+    if a2.get()==1:
+      sum=sum+1
+    if a3.get()==1:
+      sum=sum+1
+    if a4.get()==1:
+      sum=sum+1
+    if a5.get()==1:
+      sum=sum+1
+    if a6.get()==1:
+      sum=sum+1
+    if a7.get()==1:
+      sum=sum+1
+    if a8.get()==1:
+      sum=sum+1
+    if a9.get()==1:
+      sum=sum+1
+    if a10.get()==1:
+      sum=sum+1
+    izvade1=Label(logs, text='No 10 jautājumiem, jums pareizas ir '+str(sum)+'.', font=20)
+    izvade1.place(x=180, y=100)
+    def rezultats1dzesana():
+      izvade1.place_forget()
+      nojauna.place_forget()
+      sākumaekrānsplace()
+    nojauna=Button(logs, text='Iet uz galveno izvelni', command=rezultats1dzesana)
+    nojauna.place(x=220, y=250)
 
 logs.mainloop()
