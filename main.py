@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter.font import BOLD, Font
 from tkinter.ttk import *
+from PIL import Image,ImageTk
 x=0
 logs=Tk()
 logs.title('Alkohola tests')
@@ -12,16 +13,26 @@ a.place(x=0, y=0)
 def navsākumaekrāns():
   label.place_forget()
   Sākt.place_forget()
+  minēšana.place_forget()
   pirmaisuzd()
+
+def minēšana():
+  label.place_forget()
+  Sākt.place_forget()
+  minēšana.place_forget()
+  trakaispirmais()
   
 def sākumaekrānsplace():
   label.place(x=250, y=100, height=20, width=150)
-  Sākt.place(x=280, y=300)
+  Sākt.place(x=280, y=200)
+  minēšana.place(x=280, y=300)
 
 label = Label(logs, text="Tests par alkoholu",font=25)
 label.place(x=250, y=100, height=20, width=150)
 Sākt = Button(logs, text='Sākt testu', command=navsākumaekrāns)
-Sākt.place(x=280, y=300)
+Sākt.place(x=280, y=200)
+minēšana = Button(logs, text='Minēšana', command=minēšana)
+minēšana.place(x=280, y=300)
 
   
 #Jautājumu cipari (neaiztikt)
@@ -257,7 +268,24 @@ def rezultats1():
       izvade1.place_forget()
       nojauna.place_forget()
       sākumaekrānsplace()
+      a1=0
+      a2=0
+      a3=0
+      a4=0
+      a5=0
+      a6=0
+      a7=0
+      a8=0
+      a9=0
+      a10=0
     nojauna=Button(logs, text='Iet uz galveno izvelni', command=rezultats1dzesana)
     nojauna.place(x=250, y=300)
+
+def trakaispirmais():
+  image=Image.open('image.png')
+  img=image.resize((450, 350))
+  jager1=ImageTk.PhotoImage(img)
+  a.create_image(400, 250,image=jager1)
+  
 
 logs.mainloop()
