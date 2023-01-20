@@ -16,12 +16,12 @@ def navsākumaekrāns():
   
 def sākumaekrānsplace():
   label.place(x=250, y=100, height=20, width=150)
-  Sākt.place(x=300, y=300)
+  Sākt.place(x=280, y=300)
 
 label = Label(logs, text="Tests par alkoholu",font=25)
 label.place(x=250, y=100, height=20, width=150)
 Sākt = Button(logs, text='Sākt testu', command=navsākumaekrāns)
-Sākt.place(x=300, y=300)
+Sākt.place(x=280, y=300)
 
   
 #Jautājumu cipari (neaiztikt)
@@ -196,7 +196,7 @@ def devitaisuzd():
   R25=Checkbutton(logs, text='Jā', variable = a9, onvalue=1, offvalue=0)
   R26=Checkbutton(logs, text='Nē', variable = a9, onvalue=2, offvalue=0)
   R27=Checkbutton(logs, text='Atšķirībā kāds veids', variable = a9, onvalue=3, offvalue=0)
-  J9.place(x=110, y=100)
+  J9.place(x=200, y=100)
   R25.place(x=270, y=150)
   R26.place(x=270, y=200)
   R27.place(x=270, y=250)
@@ -215,7 +215,7 @@ def desmitaisuzd():
   R28=Checkbutton(logs, text='Jā', variable = a10, onvalue=1, offvalue=0)
   R29=Checkbutton(logs, text='Nē', variable = a10, onvalue=2, offvalue=0)
   R30=Checkbutton(logs, text='Atšķirībā kāds veids', variable = a10, onvalue=3, offvalue=0)
-  J10.place(x=110, y=100)
+  J10.place(x=200, y=100)
   R28.place(x=270, y=150)
   R29.place(x=270, y=200)
   R30.place(x=270, y=250)
@@ -258,6 +258,6 @@ def rezultats1():
       nojauna.place_forget()
       sākumaekrānsplace()
     nojauna=Button(logs, text='Iet uz galveno izvelni', command=rezultats1dzesana)
-    nojauna.place(x=220, y=250)
+    nojauna.place(x=250, y=300)
 
 logs.mainloop()
