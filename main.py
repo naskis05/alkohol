@@ -192,11 +192,11 @@ def astotaisuzd():
   poga8.place(x=250, y=300)
 
 def devitaisuzd():
-  J9=Label(logs, text='Vai alkohols skaitās kā narkotikas?', font=15)
-  R25=Checkbutton(logs, text='Jā', variable = a9, onvalue=1, offvalue=0)
-  R26=Checkbutton(logs, text='Nē', variable = a9, onvalue=2, offvalue=0)
-  R27=Checkbutton(logs, text='Atšķirībā kāds veids', variable = a9, onvalue=3, offvalue=0)
-  J9.place(x=200, y=100)
+  J9=Label(logs, text='Cik cilvēki Latvijā pieķerti alkohola reibumā pie stūres 2020. gadā?', font=15)
+  R25=Checkbutton(logs, text='2469 cilvēki', variable = a9, onvalue=3, offvalue=0)
+  R26=Checkbutton(logs, text='2894 cilvēki', variable = a9, onvalue=2, offvalue=0)
+  R27=Checkbutton(logs, text='3275 cilvēki', variable = a9, onvalue=1, offvalue=0)
+  J9.place(x=100, y=100)
   R25.place(x=270, y=150)
   R26.place(x=270, y=200)
   R27.place(x=270, y=250)
@@ -211,11 +211,11 @@ def devitaisuzd():
   poga9.place(x=250, y=300)
 
 def desmitaisuzd():
-  J10=Label(logs, text='Vai alkohols skaitās kā narkotikas?', font=15)
-  R28=Checkbutton(logs, text='Jā', variable = a10, onvalue=1, offvalue=0)
-  R29=Checkbutton(logs, text='Nē', variable = a10, onvalue=2, offvalue=0)
-  R30=Checkbutton(logs, text='Atšķirībā kāds veids', variable = a10, onvalue=3, offvalue=0)
-  J10.place(x=200, y=100)
+  J10=Label(logs, text='Cik cilvēki 2017. gadā nomira no alkohola saindēšanās Latvijā?', font=15)
+  R28=Checkbutton(logs, text='117 cilvēki', variable = a10, onvalue=1, offvalue=0)
+  R29=Checkbutton(logs, text='186 cilvēki', variable = a10, onvalue=2, offvalue=0)
+  R30=Checkbutton(logs, text='294 cilvēki', variable = a10, onvalue=3, offvalue=0)
+  J10.place(x=100, y=100)
   R28.place(x=270, y=150)
   R29.place(x=270, y=200)
   R30.place(x=270, y=250)
