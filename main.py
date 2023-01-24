@@ -47,6 +47,20 @@ a8=IntVar()
 a9=IntVar()
 a10=IntVar()
 
+dlight=1.59
+dzimtas=5.79
+garage=1.89
+morgan=24.99
+jager=24.99
+jhon=2.99
+lode=2.29
+riga=20.99
+sarema=10.99
+speka16=1.99
+stolis=16.99
+tervete=1.59
+
+
 
 #Jautājumi un atbildes
 def pirmaisuzd():
@@ -282,10 +296,15 @@ def rezultats1():
     nojauna.place(x=250, y=300)
 
 def trakaispirmais():
-  image=Image.open('image.png')
-  img=image.resize((450, 350))
-  jager1=ImageTk.PhotoImage(img)
-  a.create_image(400, 250,image=jager1)
+  test=a.create_rectangle(200, 50, 400, 250, fill='red')
+  nauda1=Button(logs, text='Izvadīt rezultātu')
+  nauda1.place(x=250, y=400)
+  ievade=Text(logs, width=15, height=1)
+  ievade.place(x=250, y=350)
+  nosaukums1=Label(logs, text='Cik maksā 0.5 litri ar Dlight enerģijas dzērienu?', font=20)
+  nosaukums1.place(x=150, y=300)
+  def pirmaisalkash():
+    pass
   
 
 logs.mainloop()
