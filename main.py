@@ -297,12 +297,15 @@ def rezultats1():
 
 def trakaispirmais():
   test=a.create_rectangle(200, 50, 400, 250, fill='red')
+  bilde = ImageTk.PhotoImage(Image.open('dlight.png'))  
+  a.create_image(10, 10, anchor=NW, image=bilde) 
   nauda1=Button(logs, text='Izvadīt rezultātu')
   nauda1.place(x=250, y=400)
   ievade=Text(logs, width=15, height=1)
   ievade.place(x=250, y=350)
   nosaukums1=Label(logs, text='Cik maksā 0.5 litri ar Dlight enerģijas dzērienu?', font=20)
   nosaukums1.place(x=150, y=300)
+  a.create_image(200, 200,image=bilde)
   def pirmaisalkash():
     pass
   
