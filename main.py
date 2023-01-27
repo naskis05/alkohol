@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter.font import BOLD, Font
 from tkinter.ttk import *
-from PIL import Image,ImageTk
+from PIL import Image, ImageTk
 x=0
 logs=Tk()
 logs.title('Alkohola tests')
@@ -59,6 +59,19 @@ sarema=10.99
 speka16=1.99
 stolis=16.99
 tervete=1.59
+
+lasisana1=StringVar()
+lasisana2=StringVar()
+lasisana3=StringVar()
+lasisana4=StringVar()
+lasisana5=StringVar()
+lasisana6=StringVar()
+lasisana7=StringVar()
+lasisana8=StringVar()
+lasisana9=StringVar()
+lasisana10=StringVar()
+lasisana11=StringVar()
+lasisana12=StringVar()
 
 
 
@@ -296,18 +309,18 @@ def rezultats1():
     nojauna.place(x=250, y=300)
 
 def trakaispirmais():
-  test=a.create_rectangle(200, 50, 400, 250, fill='red')
-  bilde = ImageTk.PhotoImage(Image.open('dlight.png'))  
-  a.create_image(10, 10, anchor=NW, image=bilde) 
-  nauda1=Button(logs, text='Izvadīt rezultātu')
-  nauda1.place(x=250, y=400)
-  ievade=Text(logs, width=15, height=1)
+  dlightbilde = PhotoImage(file='dlight.png')
+  a.create_image(300, 150, image=dlightbilde)
+  ievade=Entry(logs, width=13, textvariable=lasisana1)
   ievade.place(x=250, y=350)
   nosaukums1=Label(logs, text='Cik maksā 0.5 litri ar Dlight enerģijas dzērienu?', font=20)
   nosaukums1.place(x=150, y=300)
-  a.create_image(200, 200,image=bilde)
+  label = Label(frame, image=dlightbilde)
+  label.pack()
+  label.place(x=200, y=200)
   def pirmaisalkash():
-    pass
-  
+    print(lasisana1.get())
+  nauda1=Button(logs, text='Izvadīt rezultātu', command=pirmaisalkash)
+  nauda1.place(x=250, y=400)
 
 logs.mainloop()
