@@ -1,13 +1,13 @@
 from tkinter import *
 from tkinter.font import BOLD, Font
 from tkinter.ttk import *
-from PIL import Image, ImageTk
+#from PIL import Image, ImageTk
 x=0
 logs=Tk()
 logs.title('Alkohola tests')
 logs.geometry('640x480')
 a=Canvas(logs, width=640, height=480)
-a.place(x=0, y=0)
+a.pack()
 #Sākuma ekrāns
   
 def navsākumaekrāns():
@@ -309,18 +309,255 @@ def rezultats1():
     nojauna.place(x=250, y=300)
 
 def trakaispirmais():
-  dlightbilde = PhotoImage(file='dlight.png')
+  dlightbilde = PhotoImage(file= "dlight.png")
   a.create_image(300, 150, image=dlightbilde)
-  ievade=Entry(logs, width=13, textvariable=lasisana1)
-  ievade.place(x=250, y=350)
+  bilde1 = Label(image=dlightbilde)
+  bilde1.image = dlightbilde
+  bilde1.pack()
+  ievade1=Entry(logs, width=13, textvariable=lasisana1)
+  ievade1.place(x=250, y=350)
   nosaukums1=Label(logs, text='Cik maksā 0.5 litri ar Dlight enerģijas dzērienu?', font=20)
   nosaukums1.place(x=150, y=300)
-  label = Label(frame, image=dlightbilde)
-  label.pack()
-  label.place(x=200, y=200)
   def pirmaisalkash():
-    print(lasisana1.get())
+    atbildelight=lasisana1.get()
+    bilde1.place_forget()
+    nosaukums1.place_forget()
+    ievade1.place_forget()
+    dlightbilde.__del__()
+    trakaisotrais()
+    nauda1.place_forget()
   nauda1=Button(logs, text='Izvadīt rezultātu', command=pirmaisalkash)
   nauda1.place(x=250, y=400)
+
+def trakaisotrais():
+  dzimtasbilde = PhotoImage(file= "dzimtas.png")
+  a.create_image(300, 150, image=dzimtasbilde)
+  bilde2 = Label(image=dzimtasbilde)
+  bilde2.image = dzimtasbilde
+  bilde2.pack()
+  ievade2=Entry(logs, width=13, textvariable=lasisana2)
+  ievade2.place(x=250, y=350)
+  nosaukums2=Label(logs, text='Cik maksā 0.5 litri ar Dzimtas degvīnu?', font=20)
+  nosaukums2.place(x=150, y=300)
+  def otraisalkash():
+    atbildedzimtas=lasisana2.get()
+    bilde2.place_forget()
+    dzimtasbilde.__del__()
+    nosaukums2.place_forget()
+    ievade2.place_forget()
+    trakaistrešais()
+    nauda2.place_forget()
+  nauda2=Button(logs, text='Izvadīt rezultātu', command=otraisalkash)
+  nauda2.place(x=250, y=400)
+
+def trakaistrešais():
+  garagebilde = PhotoImage(file= "garage.png")
+  a.create_image(300, 150, image=garagebilde)
+  bilde3 = Label(image=garagebilde)
+  bilde3.image = garagebilde
+  bilde3.pack()
+  ievade3=Entry(logs, width=13, textvariable=lasisana3)
+  ievade3.place(x=250, y=350)
+  nosaukums3=Label(logs, text='Cik maksā 0.275 litri ar Garāžu?', font=20)
+  nosaukums3.place(x=150, y=300)
+  def trešaisalkash():
+    atbildegarage=lasisana3.get()
+    bilde3.place_forget()
+    garagebilde.__del__()
+    nosaukums3.place_forget()
+    ievade3.place_forget()
+    trakaisceturtais()
+    nauda3.place_forget()
+  nauda3=Button(logs, text='Izvadīt rezultātu', command=trešaisalkash)
+  nauda3.place(x=250, y=400)
+
+def trakaisceturtais():
+  jagerbilde = PhotoImage(file= "jager.png")
+  a.create_image(300, 150, image=jagerbilde)
+  bilde4 = Label(image=jagerbilde)
+  bilde4.image = jagerbilde
+  bilde4.pack()
+  ievade4=Entry(logs, width=13, textvariable=lasisana4)
+  ievade4.place(x=250, y=350)
+  nosaukums4=Label(logs, text='Cik maksā litrs ar Jāger?', font=20)
+  nosaukums4.place(x=150, y=300)
+  def ceturtaisalkash():
+    atbildejager=lasisana4.get()
+    bilde4.place_forget()
+    jagerbilde.__del__()
+    nosaukums4.place_forget()
+    ievade4.place_forget()
+    trakaispiektais()
+    nauda4.place_forget()
+  nauda4=Button(logs, text='Izvadīt rezultātu', command=ceturtaisalkash)
+  nauda4.place(x=250, y=400)
+
+def trakaispiektais():
+  jhonbilde = PhotoImage(file= "jhon.png")
+  a.create_image(300, 150, image=jhonbilde)
+  bilde5 = Label(image=jhonbilde)
+  bilde5.image = jhonbilde
+  bilde5.pack()
+  ievade5=Entry(logs, width=13, textvariable=lasisana5)
+  ievade5.place(x=250, y=350)
+  nosaukums5=Label(logs, text='Cik maksā litrs ar Džoni?', font=20)
+  nosaukums5.place(x=150, y=300)
+  def piektaisalkash():
+    atbildejhon=lasisana5.get()
+    bilde5.place_forget()
+    jhonbilde.__del__()
+    nosaukums5.place_forget()
+    ievade5.place_forget()
+    trakaissestais()
+    nauda5.place_forget()
+  nauda5=Button(logs, text='Izvadīt rezultātu', command=piektaisalkash)
+  nauda5.place(x=250, y=400)
+
+def trakaissestais():
+  kapteinisbilde = PhotoImage(file= "kapteinis.png")
+  a.create_image(300, 150, image=kapteinisbilde)
+  bilde6 = Label(image=kapteinisbilde)
+  bilde6.image = kapteinisbilde
+  bilde6.pack()
+  ievade6=Entry(logs, width=13, textvariable=lasisana6)
+  ievade6.place(x=250, y=350)
+  nosaukums6=Label(logs, text='Cik maksā litrs ar Captain Morgan?', font=20)
+  nosaukums6.place(x=150, y=300)
+  def sestaisalkash():
+    atbildekapteinis=lasisana6.get()
+    bilde6.place_forget()
+    kapteinisbilde.__del__()
+    nosaukums6.place_forget()
+    ievade6.place_forget()
+    trakaisseptitais()
+    nauda6.place_forget()
+  nauda6=Button(logs, text='Izvadīt rezultātu', command=sestaisalkash)
+  nauda6.place(x=250, y=400)
+
+def trakaisseptitais():
+  lodebilde = PhotoImage(file= "lode piu.png")
+  a.create_image(300, 150, image=lodebilde)
+  bilde7 = Label(image=lodebilde)
+  bilde7.image = lodebilde
+  bilde7.pack()
+  ievade7=Entry(logs, width=13, textvariable=lasisana7)
+  ievade7.place(x=250, y=350)
+  nosaukums7=Label(logs, text='Cik maksā 0,5 litri ar Lodi?', font=20)
+  nosaukums7.place(x=150, y=300)
+  def septitaisalkash():
+    atbildelode=lasisana7.get()
+    bilde7.place_forget()
+    lodebilde.__del__()
+    nosaukums7.place_forget()
+    ievade7.place_forget()
+    trakaisastotais()
+    nauda7.place_forget()
+  nauda7=Button(logs, text='Izvadīt rezultātu', command=septitaisalkash)
+  nauda7.place(x=250, y=400)
+
+def trakaisastotais():
+  rigabilde = PhotoImage(file= "riigas.png")
+  a.create_image(300, 150, image=rigabilde)
+  bilde8 = Label(image=rigabilde)
+  bilde8.image = rigabilde
+  bilde8.pack()
+  ievade8=Entry(logs, width=13, textvariable=lasisana8)
+  ievade8.place(x=250, y=350)
+  nosaukums8=Label(logs, text='Cik maksā litrs ar Rīgas melno balzāmu?', font=20)
+  nosaukums8.place(x=150, y=300)
+  def astotaisalkash():
+    atbilderiga=lasisana8.get()
+    bilde8.place_forget()
+    rigabilde.__del__()
+    nosaukums8.place_forget()
+    ievade8.place_forget()
+    trakaisdevitais()
+    nauda8.place_forget()
+  nauda8=Button(logs, text='Izvadīt rezultātu', command=astotaisalkash)
+  nauda8.place(x=250, y=400)
+
+def trakaisdevitais():
+  saremabilde = PhotoImage(file= "sareema.png")
+  a.create_image(300, 150, image=saremabilde)
+  bilde9 = Label(image=saremabilde)
+  bilde9.image = saremabilde
+  bilde9.pack()
+  ievade9=Entry(logs, width=13, textvariable=lasisana9)
+  ievade9.place(x=250, y=350)
+  nosaukums9=Label(logs, text='Cik maksā 0,5 litri ar sāremas džinu?', font=20)
+  nosaukums9.place(x=150, y=300)
+  def devitaisalkash():
+    atbildesarema=lasisana9.get()
+    bilde9.place_forget()
+    saremabilde.__del__()
+    nosaukums9.place_forget()
+    ievade9.place_forget()
+    trakaisdesmitais()
+    nauda9.place_forget()
+  nauda9=Button(logs, text='Izvadīt rezultātu', command=devitaisalkash)
+  nauda9.place(x=250, y=400)
+
+def trakaisdesmitais():
+  tervetesbilde = PhotoImage(file= "senču.png")
+  a.create_image(300, 150, image=tervetesbilde)
+  bilde10 = Label(image=tervetesbilde)
+  bilde10.image = tervetesbilde
+  bilde10.pack()
+  ievade10=Entry(logs, width=13, textvariable=lasisana10)
+  ievade10.place(x=250, y=350)
+  nosaukums10=Label(logs, text='Cik maksā 0,5 litri ar Tēŗvetes alu?', font=20)
+  nosaukums10.place(x=150, y=300)
+  def desmitaisalkash():
+    atbildesencu=lasisana10.get()
+    bilde10.place_forget()
+    tervetesbilde.__del__()
+    nosaukums10.place_forget()
+    ievade10.place_forget()
+    trakaisvienpadsmitais()
+    nauda10.place_forget()
+  nauda10=Button(logs, text='Izvadīt rezultātu', command=desmitaisalkash)
+  nauda10.place(x=250, y=400)
+
+def trakaisvienpadsmitais():
+  cesubilde = PhotoImage(file= "speeka 16.png")
+  a.create_image(300, 150, image=cesubilde)
+  bilde11 = Label(image=cesubilde)
+  bilde11.image = cesubilde
+  bilde11.pack()
+  ievade11=Entry(logs, width=13, textvariable=lasisana11)
+  ievade11.place(x=250, y=350)
+  nosaukums11=Label(logs, text='Cik maksā 0,28 litri ar Cēsu 14?', font=20)
+  nosaukums11.place(x=150, y=300)
+  def vienpadsmitaisalkash():
+    atbildespeeka16=lasisana11.get()
+    bilde11.place_forget()
+    cesubilde.__del__()
+    nosaukums11.place_forget()
+    ievade11.place_forget()
+    trakaisdivpadsmitais()
+    nauda11.place_forget()
+  nauda11=Button(logs, text='Izvadīt rezultātu', command=vienpadsmitaisalkash)
+  nauda11.place(x=250, y=400)
+
+def trakaisdivpadsmitais():
+  stolisbilde = PhotoImage(file= "stolis.png")
+  a.create_image(300, 150, image=stolisbilde)
+  bilde12 = Label(image=stolisbilde)
+  bilde12.image = stolisbilde
+  bilde12.pack()
+  ievade12=Entry(logs, width=13, textvariable=lasisana12)
+  ievade12.place(x=250, y=350)
+  nosaukums12=Label(logs, text='Cik maksā litrs ar Stolichnaya?', font=20)
+  nosaukums12.place(x=150, y=300)
+  def divpadsmitaisalkash():
+    atbildestolis=lasisana12.get()
+    bilde12.place_forget()
+    stolisbilde.__del__()
+    nosaukums12.place_forget()
+    ievade12.place_forget()
+    rezultats2()
+    nauda12.place_forget()
+  nauda12=Button(logs, text='Izvadīt rezultātu', command=divpadsmitaisalkash)
+  nauda12.place(x=250, y=400)
 
 logs.mainloop()
