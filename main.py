@@ -368,7 +368,7 @@ def trakaistrešais():
   ievade3=Entry(logs, width=13, textvariable=lasisana3)
   ievade3.place(x=250, y=350)
   nosaukums3=Label(logs, text='Cik maksā 0.275 litri ar Garāžu?', font=20)
-  nosaukums3.place(x=150, y=300)
+  nosaukums3.place(x=200, y=300)
   def trešaisalkash():
     atbildegarage=lasisana3.get()
     bilde3.place_forget()
@@ -391,7 +391,7 @@ def trakaisceturtais():
   ievade4=Entry(logs, width=13, textvariable=lasisana4)
   ievade4.place(x=250, y=350)
   nosaukums4=Label(logs, text='Cik maksā litrs ar Jāger?', font=20)
-  nosaukums4.place(x=150, y=300)
+  nosaukums4.place(x=200, y=300)
   def ceturtaisalkash():
     atbildejager=lasisana4.get()
     bilde4.place_forget()
@@ -413,8 +413,8 @@ def trakaispiektais():
   bilde5.pack()
   ievade5=Entry(logs, width=13, textvariable=lasisana5)
   ievade5.place(x=250, y=350)
-  nosaukums5=Label(logs, text='Cik maksā litrs ar Džoni?', font=20)
-  nosaukums5.place(x=150, y=300)
+  nosaukums5=Label(logs, text='Cik maksā litrs ar Džonu?', font=20)
+  nosaukums5.place(x=200, y=300)
   def piektaisalkash():
     atbildejhon=lasisana5.get()
     bilde5.place_forget()
@@ -437,7 +437,7 @@ def trakaissestais():
   ievade6=Entry(logs, width=13, textvariable=lasisana6)
   ievade6.place(x=250, y=350)
   nosaukums6=Label(logs, text='Cik maksā litrs ar Captain Morgan?', font=20)
-  nosaukums6.place(x=150, y=300)
+  nosaukums6.place(x=200, y=300)
   def sestaisalkash():
     atbildekapteinis=lasisana6.get()
     bilde6.place_forget()
@@ -460,7 +460,7 @@ def trakaisseptitais():
   ievade7=Entry(logs, width=13, textvariable=lasisana7)
   ievade7.place(x=250, y=350)
   nosaukums7=Label(logs, text='Cik maksā 0,5 litri ar Lodi?', font=20)
-  nosaukums7.place(x=150, y=300)
+  nosaukums7.place(x=200, y=300)
   def septitaisalkash():
     atbildelode=lasisana7.get()
     bilde7.place_forget()
@@ -483,7 +483,7 @@ def trakaisastotais():
   ievade8=Entry(logs, width=13, textvariable=lasisana8)
   ievade8.place(x=250, y=350)
   nosaukums8=Label(logs, text='Cik maksā litrs ar Rīgas melno balzāmu?', font=20)
-  nosaukums8.place(x=150, y=300)
+  nosaukums8.place(x=175, y=300)
   def astotaisalkash():
     atbilderiga=lasisana8.get()
     bilde8.place_forget()
@@ -506,7 +506,7 @@ def trakaisdevitais():
   ievade9=Entry(logs, width=13, textvariable=lasisana9)
   ievade9.place(x=250, y=350)
   nosaukums9=Label(logs, text='Cik maksā 0,5 litri ar sāremas džinu?', font=20)
-  nosaukums9.place(x=150, y=300)
+  nosaukums9.place(x=200, y=300)
   def devitaisalkash():
     atbildesarema=lasisana9.get()
     bilde9.place_forget()
@@ -528,8 +528,8 @@ def trakaisdesmitais():
   bilde10.pack()
   ievade10=Entry(logs, width=13, textvariable=lasisana10)
   ievade10.place(x=250, y=350)
-  nosaukums10=Label(logs, text='Cik maksā 0,5 litri ar Tēŗvetes alu?', font=20)
-  nosaukums10.place(x=150, y=300)
+  nosaukums10=Label(logs, text='Cik maksā 0,5 litri ar Tērvetes alu?', font=20)
+  nosaukums10.place(x=200, y=300)
   def desmitaisalkash():
     atbildesencu=lasisana10.get()
     bilde10.place_forget()
@@ -552,7 +552,7 @@ def trakaisvienpadsmitais():
   ievade11=Entry(logs, width=13, textvariable=lasisana11)
   ievade11.place(x=250, y=350)
   nosaukums11=Label(logs, text='Cik maksā 0,28 litri ar Cēsu 14?', font=20)
-  nosaukums11.place(x=150, y=300)
+  nosaukums11.place(x=200, y=300)
   def vienpadsmitaisalkash():
     atbildespeeka16=lasisana11.get()
     bilde11.place_forget()
@@ -575,7 +575,7 @@ def trakaisdivpadsmitais():
   ievade12=Entry(logs, width=13, textvariable=lasisana12)
   ievade12.place(x=250, y=350)
   nosaukums12=Label(logs, text='Cik maksā litrs ar Stolichnaya?', font=20)
-  nosaukums12.place(x=150, y=300)
+  nosaukums12.place(x=200, y=300)
   def divpadsmitaisalkash():
     atbildestolis=lasisana12.get()
     bilde12.place_forget()
