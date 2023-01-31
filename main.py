@@ -607,11 +607,26 @@ def rezultats2():
   beiguraksts2.place(x=75, y=200)
   beiguraksts3=Label(text='Nākamajā logā redzēsiet bildi ar alkohola statistiku.', font=20)
   beiguraksts3.place(x=75, y=250)
-  def tabula():
-    beiguteksts.place_forget()
+  def izdzesana():
+    beiguraksts.place_forget()
     beiguraksts2.place_forget()
     beiguraksts3.place_forget()
-  pogauztabulu=Button(logs, text='Uz tabulu!', command=tabula)
+    pogauztabulu.place_forget()
+    tabula()
+  pogauztabulu=Button(logs, text='Uz tabulu!', command=izdzesana)
   pogauztabulu.place(x=250, y=300)
 
+def tabula():
+  tabulareal=PhotoImage(file= "tabula.png")
+  a.create_image(350, 100, image=tabulareal)
+  tabulabilde = Label(image=tabulareal)
+  tabulabilde.image = tabulareal
+  tabulabilde.pack()
+  def maucamsakuma():
+    tabulareal.__del__()
+    tabulabilde.pack_forget()
+    uzsakumu.place_forget()
+    sākumaekrānsplace()
+  uzsakumu=Button(logs, text='Uz sākumu!', command=maucamsakuma)
+  uzsakumu.place(x=250, y=300)
 logs.mainloop()
