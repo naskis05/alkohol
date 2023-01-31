@@ -60,6 +60,8 @@ speka16=1.99
 stolis=16.99
 tervete=1.59
 
+kopa=dlight+dzimtas+garage+morgan+jager+jhon+lode+riga+sarema+speka16+stolis+tervete
+
 lasisana1=StringVar()
 lasisana2=StringVar()
 lasisana3=StringVar()
@@ -72,6 +74,8 @@ lasisana9=StringVar()
 lasisana10=StringVar()
 lasisana11=StringVar()
 lasisana12=StringVar()
+
+sum=0
 
 
 
@@ -320,12 +324,15 @@ def trakaispirmais():
   nosaukums1.place(x=150, y=300)
   def pirmaisalkash():
     atbildelight=lasisana1.get()
+    print (atbildelight)
     bilde1.place_forget()
     nosaukums1.place_forget()
     ievade1.place_forget()
     dlightbilde.__del__()
     trakaisotrais()
     nauda1.place_forget()
+    global sum
+    sum=sum+int(atbildelight)
   nauda1=Button(logs, text='Izvadīt rezultātu', command=pirmaisalkash)
   nauda1.place(x=250, y=400)
 
@@ -347,6 +354,8 @@ def trakaisotrais():
     ievade2.place_forget()
     trakaistrešais()
     nauda2.place_forget()
+    global sum
+    sum=sum+int(atbildedzimtas)
   nauda2=Button(logs, text='Izvadīt rezultātu', command=otraisalkash)
   nauda2.place(x=250, y=400)
 
@@ -368,6 +377,8 @@ def trakaistrešais():
     ievade3.place_forget()
     trakaisceturtais()
     nauda3.place_forget()
+    global sum
+    sum=sum+int(atbildegarage)
   nauda3=Button(logs, text='Izvadīt rezultātu', command=trešaisalkash)
   nauda3.place(x=250, y=400)
 
@@ -389,6 +400,8 @@ def trakaisceturtais():
     ievade4.place_forget()
     trakaispiektais()
     nauda4.place_forget()
+    global sum
+    sum=sum+int(atbildejager)
   nauda4=Button(logs, text='Izvadīt rezultātu', command=ceturtaisalkash)
   nauda4.place(x=250, y=400)
 
@@ -410,6 +423,8 @@ def trakaispiektais():
     ievade5.place_forget()
     trakaissestais()
     nauda5.place_forget()
+    global sum
+    sum=sum+int(atbildejhon)
   nauda5=Button(logs, text='Izvadīt rezultātu', command=piektaisalkash)
   nauda5.place(x=250, y=400)
 
@@ -431,6 +446,8 @@ def trakaissestais():
     ievade6.place_forget()
     trakaisseptitais()
     nauda6.place_forget()
+    global sum
+    sum=sum+int(atbildekapteinis)
   nauda6=Button(logs, text='Izvadīt rezultātu', command=sestaisalkash)
   nauda6.place(x=250, y=400)
 
@@ -452,6 +469,8 @@ def trakaisseptitais():
     ievade7.place_forget()
     trakaisastotais()
     nauda7.place_forget()
+    global sum
+    sum=sum+int(atbildelode)
   nauda7=Button(logs, text='Izvadīt rezultātu', command=septitaisalkash)
   nauda7.place(x=250, y=400)
 
@@ -473,6 +492,8 @@ def trakaisastotais():
     ievade8.place_forget()
     trakaisdevitais()
     nauda8.place_forget()
+    global sum
+    sum=sum+int(atbilderiga)
   nauda8=Button(logs, text='Izvadīt rezultātu', command=astotaisalkash)
   nauda8.place(x=250, y=400)
 
@@ -494,6 +515,8 @@ def trakaisdevitais():
     ievade9.place_forget()
     trakaisdesmitais()
     nauda9.place_forget()
+    global sum
+    sum=sum+int(atbildesarema)
   nauda9=Button(logs, text='Izvadīt rezultātu', command=devitaisalkash)
   nauda9.place(x=250, y=400)
 
@@ -515,6 +538,8 @@ def trakaisdesmitais():
     ievade10.place_forget()
     trakaisvienpadsmitais()
     nauda10.place_forget()
+    global sum
+    sum=sum+int(atbildesencu)
   nauda10=Button(logs, text='Izvadīt rezultātu', command=desmitaisalkash)
   nauda10.place(x=250, y=400)
 
@@ -536,6 +561,8 @@ def trakaisvienpadsmitais():
     ievade11.place_forget()
     trakaisdivpadsmitais()
     nauda11.place_forget()
+    global sum
+    sum=sum+int(atbildespeeka16)
   nauda11=Button(logs, text='Izvadīt rezultātu', command=vienpadsmitaisalkash)
   nauda11.place(x=250, y=400)
 
@@ -555,9 +582,36 @@ def trakaisdivpadsmitais():
     stolisbilde.__del__()
     nosaukums12.place_forget()
     ievade12.place_forget()
-    rezultats2()
     nauda12.place_forget()
+    global sum
+    sum=sum+int(atbildestolis)
+    rezultats2()
   nauda12=Button(logs, text='Izvadīt rezultātu', command=divpadsmitaisalkash)
   nauda12.place(x=250, y=400)
+
+def rezultats2():
+  if sum>kopa:
+    procenti=(sum/kopa)*100
+    procenti=round(procenti,1)
+    beiguteksts='Jūs domājāt ka alkohols ir par {0}% dārgāks nekā patiesībā!'.format(procenti)
+  elif sum<kopa:
+    procenti=(sum/kopa)*100
+    procenti=100-procenti
+    procenti=round(procenti,1)
+    beiguteksts='Jūs domājāt ka alkohols ir par {0}% lētāks nekā patiesībā!'.format(procenti)
+  elif sum==kopa:
+    beiguteksts='Jūs precīzi uzminējāt alkoholu cenu!'
+  beiguraksts=Label(text=beiguteksts, font=20)
+  beiguraksts.place(x=75, y=150)
+  beiguraksts2=Label(text='Neatkarīgi no rezultāta, dzert alkoholu ir naudas izmešana,', font=20)
+  beiguraksts2.place(x=75, y=200)
+  beiguraksts3=Label(text='Nākamajā logā redzēsiet bildi ar alkohola statistiku.', font=20)
+  beiguraksts3.place(x=75, y=250)
+  def tabula():
+    beiguteksts.place_forget()
+    beiguraksts2.place_forget()
+    beiguraksts3.place_forget()
+  pogauztabulu=Button(logs, text='Uz tabulu!', command=tabula)
+  pogauztabulu.place(x=250, y=300)
 
 logs.mainloop()
