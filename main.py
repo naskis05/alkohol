@@ -8,6 +8,11 @@ logs.title('Alkohola tests')
 logs.geometry('640x480')
 a=Canvas(logs, width=640, height=480)
 a.pack()
+background=PhotoImage(file= "background1.png")
+a.create_image(320, 240, image=background)
+bg = Label(image=background)
+bg.image = background
+bg.pack()
 #Sākuma ekrāns
   
 def navsākumaekrāns():
